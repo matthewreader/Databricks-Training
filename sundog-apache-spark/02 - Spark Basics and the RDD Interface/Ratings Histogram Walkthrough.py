@@ -44,7 +44,11 @@ df.describe().show()
 
 # COMMAND ----------
 
-# df.write.format("parquet").saveAsTable("movielens_ratings")
+(df
+ .write
+ .format("parquet")
+ .mode("overwrite")
+ .saveAsTable("sundogdata.movielens_ratings"))
 
 # COMMAND ----------
 
